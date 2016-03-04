@@ -14,7 +14,6 @@ public class Persons {
 	
 	public String toString()
 	{
-		System.out.println(id+name+age+gender);
 		return new String(id+name+age+gender);
 	}
 }
