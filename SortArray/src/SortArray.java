@@ -12,4 +12,9 @@ public class SortArray {
 		Arrays.sort(stringArray);
 		return stringArray;
 	}
+	public double[] sortArray(double[] doubleArray)
+	{
+		Arrays.sort(doubleArray);
+		return doubleArray;
+	}
 }

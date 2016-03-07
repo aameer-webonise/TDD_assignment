@@ -20,14 +20,20 @@ public class SortArrayTest {
 
 	@After
 	public void tearDown() throws Exception {
+		sort=null;
 	}
 
 	@Test
 	public void test() {
-		int expecteds[] = {1,2,3,4,5};
-		assertArrayEquals(expecteds,sort.sortArray(new int[]{5,4,3,2,1}));
-		String stringarray[] = {"five","four","one","three","two"};
-		assertArrayEquals(stringarray,sort.sortArray(new String[]{"one","two","three","four","five"}));
+		int sortedArray[] = {10,20,30,40,50};
+		assertArrayEquals(sortedArray,sort.sortArray(new int[]{50,40,30,20,10}));
+		
+		String sortedStringarray[] = {"five","four","one","three","two"};
+		assertArrayEquals(sortedStringarray,sort.sortArray(new String[]{"one","two","three","four","five"}));
+	
+		double sortedDoubleArray[]={6.3,8.0,9.5,10.3};
+		assertArrayEquals(sortedDoubleArray, sort.sortArray(new double[]{10.3,8.0,6.3,9.5}),0);
+		
 	}
 
 }
