@@ -20,6 +20,7 @@ public class UserNameTest {
 
 	@After
 	public void tearDown() throws Exception {
+		user=null;
 	}
 
 	@Test
