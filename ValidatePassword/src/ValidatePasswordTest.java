@@ -23,16 +23,17 @@ public class ValidatePasswordTest {
 	@Test
 	public void testFailure()
 	{
-	assertFalse(password.isPasswordValid("aameer454"));
-	assertFalse(password.isPasswordValid("a4aw."));
-	assertFalse(password.isPasswordValid("..,/,~`"));
+	assertFalse(password.isPasswordValid("aameer54"));
+	assertFalse(password.isPasswordValid("aam.eerau"));
+	assertFalse(password.isPasswordValid("ausekara"));
+		
 	}
 	@Test
 	public void testSuccess()
 	{
-	assertTrue(password.isPasswordValid("aameer123456."));
-	assertTrue(password.isPasswordValid("12345678."));
-	assertTrue(password.isPasswordValid("viru5432q,||`~.,"));
+	assertTrue(password.isPasswordValid("aameer1."));
+	assertTrue(password.isPasswordValid("viru-14."));
+	assertTrue(password.isPasswordValid("aa.m_eer"));
 	}
 
 }
