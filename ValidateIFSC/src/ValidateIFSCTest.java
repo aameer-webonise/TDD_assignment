@@ -9,9 +9,6 @@ import org.junit.Test;
 public class ValidateIFSCTest {
 
 	ValidateIFSC code;
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
 
 	@Before
 	public void setUp() throws Exception {
@@ -20,6 +17,7 @@ public class ValidateIFSCTest {
 
 	@After
 	public void tearDown() throws Exception {
+		code=null;
 	}
 
 	@Test
