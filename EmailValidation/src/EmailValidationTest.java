@@ -24,14 +24,18 @@ public class EmailValidationTest {
 	}
 
 	@Test
-	public void test() {
+	public void testForValidEmailId() {
 		assertTrue(email.validate("ausekar9@gmail.com"));
-		assertFalse(email.validate("@gmail.com"));
 		assertTrue(email.validate("ausekar.9.@gmail.com"));
-		assertFalse(email.validate(".9@gmail.com"));
-		assertFalse(email.validate("9@gmail.com"));
-		assertTrue(email.validate("aameer@gmail"));
+		assertTrue(email.validate("ausekar.aameer_123.@gmail.com"));
 	}
 
+	@Test
+	public void testFailsForInvalidEmailId()
+	{
+		assertFalse(email.validate("9@gmail.com"));
+		assertFalse(email.validate(".9@gmail.com"));
+		assertFalse(email.validate("@gmail.com"));
+	}
 	
 }
