@@ -17,6 +17,7 @@ public class GradeTest {
 
 	@After
 	public void tearDown() throws Exception {
+		grade=null;
 	}
 
 	@Test
