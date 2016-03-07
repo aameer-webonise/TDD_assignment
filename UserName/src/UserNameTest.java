@@ -26,6 +26,18 @@ public class UserNameTest {
 	@Test
 	public void test() {
 		assertTrue(user.validateUserName("aameer"));
+		assertTrue(user.validateUserName("aameer_ausekar"));
+		assertTrue(user.validateUserName("aameer-ausekar"));
 	}
 
+	@Test
+	public void testFailsForInvalidUserName()
+	{
+		assertFalse(user.validateUserName("aameer56"));
+		assertFalse(user.validateUserName("viru"));
+		assertFalse(user.validateUserName("aameer_45"));
+		assertFalse(user.validateUserName("aameer56"));
+		assertFalse(user.validateUserName("123456"));
+		assertFalse(user.validateUserName("aameer&%ausekar"));
+	}
 }
