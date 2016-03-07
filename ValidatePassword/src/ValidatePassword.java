@@ -3,7 +3,6 @@ import java.util.regex.Pattern;
 
 
 public class ValidatePassword {
-	String ignoreSpecial = "_,.,-";
 	private Pattern expression =Pattern.compile("^([a-zA-Z0-9]*[_!-.@#$%^&\\s]+[a-zA-Z0-9]*)+$");
 	public boolean isPasswordValid(String password)
 	{
