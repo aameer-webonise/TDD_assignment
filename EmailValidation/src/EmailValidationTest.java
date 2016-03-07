@@ -20,6 +20,7 @@ public class EmailValidationTest {
 
 	@After
 	public void tearDown() throws Exception {
+		email=null;
 	}
 
 	@Test
@@ -27,8 +28,10 @@ public class EmailValidationTest {
 		assertTrue(email.validate("ausekar9@gmail.com"));
 		assertFalse(email.validate("@gmail.com"));
 		assertTrue(email.validate("ausekar.9.@gmail.com"));
-		//assertTrue(email.validate(".9@gmail.com"));
-		//assertTrue(email.validate("9@gmail.com"));
+		assertFalse(email.validate(".9@gmail.com"));
+		assertFalse(email.validate("9@gmail.com"));
+		assertTrue(email.validate("aameer@gmail"));
 	}
 
+	
 }
