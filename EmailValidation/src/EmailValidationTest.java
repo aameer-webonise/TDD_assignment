@@ -28,6 +28,7 @@ public class EmailValidationTest {
 		assertTrue(email.validate("ausekar9@gmail.com"));
 		assertTrue(email.validate("ausekar.9.@gmail.com"));
 		assertTrue(email.validate("ausekar.aameer_123.@gmail.com"));
+		
 	}
 
 	@Test
@@ -36,6 +37,10 @@ public class EmailValidationTest {
 		assertFalse(email.validate("9@gmail.com"));
 		assertFalse(email.validate(".9@gmail.com"));
 		assertFalse(email.validate("@gmail.com"));
+		assertFalse(email.validate("ausekar.9@.com"));
+		assertFalse(email.validate("ausekar9@yahoo."));
+		assertFalse(email.validate("ausekar9@yahoo.455"));
+		assertFalse(email.validate("ausekar9@yahoocom"));
 	}
 	
 }
